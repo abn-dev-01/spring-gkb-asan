@@ -3,6 +3,12 @@ package com.abndev.asan.gkb;
 import com.abndev.asan.gkb.soap.GetPersonClient;
 import com.abndev.asan.gkb.soap.SOAPConnector;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpHost;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +18,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.ObjectToStringHttpMessageConverter;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.ws.client.core.WebServiceTemplate;
+import org.springframework.ws.transport.http.HttpComponentsMessageSender;
 
 import java.util.Objects;
 
@@ -24,10 +31,23 @@ public class GkbApplication {
     @Autowired
     private GetPersonClient client;
 
+    //    @Value("${soap.client.user.name}")
+    private String userName;
+
+    //    @Value("${soap.client.user.password}")
+    private String userPassword;
+
     public static void main(String[] args) {
         SpringApplication.run(GkbApplication.class, args);
     }
 
+    public GkbApplication(
+            @Value("${soap.client.user.name}") String userName,
+            @Value("${soap.client.user.password}") String userPassword
+    ) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+    }
 
     /**
      * WebServiceGatewaySupport requires Marshaller and Unmarshaller, which are instances of Jaxb2Marshaller class.
@@ -68,8 +88,41 @@ public class GkbApplication {
         webServiceTemplate.setMarshaller(marshaller());
         webServiceTemplate.setUnmarshaller(marshaller());
         webServiceTemplate.setDefaultUri(soapUrl);
+        // set a HttpComponentsMessageSender which provides support for basic authentication
+        webServiceTemplate.setMessageSender(httpComponentsMessageSender());
 
         return webServiceTemplate;
+    }
+
+    @Bean
+    public HttpComponentsMessageSender httpComponentsMessageSender() {
+
+        RequestConfig config = RequestConfig
+                .custom()
+                .setProxy(new HttpHost("37.228.68.27", 8080))
+                .setConnectTimeout(300000)
+                .build();
+
+        CloseableHttpClient httpClient = HttpClients
+                .custom()
+                .addInterceptorFirst(new HttpComponentsMessageSender.RemoveSoapHeadersInterceptor())
+                .setDefaultRequestConfig(config)
+                .build();
+
+
+        HttpComponentsMessageSender httpComponentsMessageSender = new HttpComponentsMessageSender(httpClient);
+        // set the basic authorization credentials
+        httpComponentsMessageSender.setCredentials(usernamePasswordCredentials());
+//        httpComponentsMessageSender.setConnectionTimeout(120000);
+//        httpComponentsMessageSender.setReadTimeout(120000);
+
+        return httpComponentsMessageSender;
+    }
+
+    @Bean
+    public UsernamePasswordCredentials usernamePasswordCredentials() {
+        // pass the user name and password to be used
+        return new UsernamePasswordCredentials(userName, userPassword);
     }
 
     @Bean
