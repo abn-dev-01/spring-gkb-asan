@@ -3,7 +3,7 @@
                   xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PersonDetailsImplService"
                   targetNamespace="http://data.gbd.chdb.scb.kz/">
     <wsdl:types>
-		<!-- Person -->
+        <!-- Person -->
         <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                    xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types/Response"
                    xmlns:ns1="http://bip.bee.kz/SyncChannel/v10/Types" elementFormDefault="qualified"
@@ -33,7 +33,7 @@
                 </xs:sequence>
             </xs:complexType>
         </xs:schema>
-		<!-- getPerson -->
+        <!-- getPerson -->
         <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://data.gbd.chdb.scb.kz/"
                    xmlns:ns3="http://gbd.chdb.scb.kz/xml/person" xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types"
                    xmlns:ns1="http://bip.bee.kz/SyncChannel/v10/Types/Response" attributeFormDefault="unqualified"
@@ -118,7 +118,7 @@
                 </xs:sequence>
             </xs:complexType>
         </xs:schema>
-		<!-- SyncSendMessageResponse -->
+        <!-- SyncSendMessageResponse -->
         <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                    xmlns:tns="http://bip.bee.kz/SyncChannel/v10/Types/Response"
                    xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types" xmlns:ns1="http://data.gbd.chdb.scb.kz/"
@@ -137,7 +137,7 @@
                 </xs:sequence>
             </xs:complexType>
         </xs:schema>
-		<!-- SyncSendMessageRequest -->
+        <!-- SyncSendMessageRequest -->
         <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                    xmlns:tns="http://bip.bee.kz/SyncChannel/v10/Types/Request"
                    xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types" xmlns:ns1="http://data.gbd.chdb.scb.kz/"
@@ -156,7 +156,7 @@
                 </xs:sequence>
             </xs:complexType>
         </xs:schema>
-		<!-- SyncMessageInfoResponse -->
+        <!-- SyncMessageInfoResponse -->
         <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bip.bee.kz/SyncChannel/v10/Types"
                    xmlns:ns3="http://bip.bee.kz/SyncChannel/v10/Types/Response"
                    xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types/Request" xmlns:ns1="http://data.gbd.chdb.scb.kz/"
@@ -210,6 +210,14 @@
                     <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
                 </xs:sequence>
             </xs:complexType>
+
+            <xs:element name="userId" type="tns:UserIdSoapHeaders"/>
+            <xs:complexType name="UserIdSoapHeaders">
+                <xs:sequence>
+                    <xs:element name="userId" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
         </xs:schema>
     </wsdl:types>
     <wsdl:message name="getPerson">
@@ -230,6 +238,11 @@
     <wsdl:message name="JAXBException">
         <wsdl:part element="tns:JAXBException" name="JAXBException"></wsdl:part>
     </wsdl:message>
+
+    <wsdl:message name="UserIdSoapHeaders">
+        <wsdl:part name="header" element="xsTicketAgent:listFlightsSoapHeaders"/>
+    </wsdl:message>
+
     <wsdl:portType name="PersonDetails">
         <wsdl:operation name="getPerson">
             <wsdl:input message="tns:getPerson" name="getPerson"></wsdl:input>
@@ -240,6 +253,7 @@
             <wsdl:fault message="tns:ScbException" name="ScbException"></wsdl:fault>
         </wsdl:operation>
     </wsdl:portType>
+    <!-- BINDING -->
     <wsdl:binding name="PersonDetailsImplServiceSoapBinding" type="tns:PersonDetails">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <wsdl:operation name="getPerson">
