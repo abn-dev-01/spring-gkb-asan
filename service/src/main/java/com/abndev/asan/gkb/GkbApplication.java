@@ -3,30 +3,27 @@ package com.abndev.asan.gkb;
 import com.abndev.asan.gkb.soap.GetPersonClient;
 import com.abndev.asan.gkb.soap.SOAPConnector;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpHost;
 import org.apache.http.auth.UsernamePasswordCredentials;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.converter.ObjectToStringHttpMessageConverter;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.ws.client.core.WebServiceTemplate;
-import org.springframework.ws.transport.http.HttpComponentsMessageSender;
-
-import java.util.Objects;
 
 @SpringBootApplication
 public class GkbApplication {
 
     public static final String SOAP_SERVICE_URL = "soap.service.url";
     public static final String SOAP_SCHEMA_PACKAGE = "com.abndev.asan.gkb.person.schema";
+    private static final Logger LOG = LoggerFactory.getLogger(GkbApplication.class);
+    //    public static final String PROXY_HOST = "37.228.68.27";
+//    public static final String PROXY_HOST = "92.46.58.110"; // 48144
+//    public static final String PROXY_HOST = "185.48.149.6"; // 8080
 
     @Autowired
     private GetPersonClient client;
@@ -37,16 +34,20 @@ public class GkbApplication {
     //    @Value("${soap.client.user.password}")
     private String userPassword;
 
+    private boolean proxyEnable;
+
     public static void main(String[] args) {
         SpringApplication.run(GkbApplication.class, args);
     }
 
     public GkbApplication(
             @Value("${soap.client.user.name}") String userName,
-            @Value("${soap.client.user.password}") String userPassword
+            @Value("${soap.client.user.password}") String userPassword,
+            @Value("${soap.client.proxy.enable}") Boolean proxyEnable
     ) {
         this.userName = userName;
         this.userPassword = userPassword;
+        this.proxyEnable = proxyEnable;
     }
 
     /**
@@ -60,9 +61,9 @@ public class GkbApplication {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        // this is the package name specified in the <generatePackage> specified in
-        // pom.xml
+        // this is the package name specified in the <generatePackage> specified in pom.xml
         marshaller.setContextPath(SOAP_SCHEMA_PACKAGE);
+
         return marshaller;
     }
 
@@ -89,41 +90,36 @@ public class GkbApplication {
         webServiceTemplate.setUnmarshaller(marshaller());
         webServiceTemplate.setDefaultUri(soapUrl);
         // set a HttpComponentsMessageSender which provides support for basic authentication
-        webServiceTemplate.setMessageSender(httpComponentsMessageSender());
+//        webServiceTemplate.setMessageSender(httpComponentsMessageSender());
 
         return webServiceTemplate;
     }
 
-    @Bean
-    public HttpComponentsMessageSender httpComponentsMessageSender() {
+//    @Bean
+//    public WebServiceMessageSender myMsgSender() {
+//        HttpComponentsMessageSender msgSender = new HttpComponentsMessageSender() {
+//            @Override
+//            protected HttpContext createContext(URI uri) {
+//                HttpHost target = new HttpHost(uri.getHost(), uri.getPort(), uri.getScheme());
+//
+//                // Create AuthCache instance
+//                AuthCache authCache = new BasicAuthCache();
+//                // Generate BASIC scheme object and add it to the local
+//                // auth cache
+//                BasicScheme basicAuth = new BasicScheme();
+//                authCache.put(target, basicAuth);
+//
+//                // Add AuthCache to the execution context
+//                HttpClientContext localContext = HttpClientContext.create();
+//                localContext.setAuthCache(authCache);
+//
+//                return localContext;
+//            }
+//        };
+//
+//        return msgSender;
+//    }
 
-        RequestConfig config = RequestConfig
-                .custom()
-                .setProxy(new HttpHost("37.228.68.27", 8080))
-                .setConnectTimeout(300000)
-                .build();
-
-        CloseableHttpClient httpClient = HttpClients
-                .custom()
-                .addInterceptorFirst(new HttpComponentsMessageSender.RemoveSoapHeadersInterceptor())
-                .setDefaultRequestConfig(config)
-                .build();
-
-
-        HttpComponentsMessageSender httpComponentsMessageSender = new HttpComponentsMessageSender(httpClient);
-        // set the basic authorization credentials
-        httpComponentsMessageSender.setCredentials(usernamePasswordCredentials());
-//        httpComponentsMessageSender.setConnectionTimeout(120000);
-//        httpComponentsMessageSender.setReadTimeout(120000);
-
-        return httpComponentsMessageSender;
-    }
-
-    @Bean
-    public UsernamePasswordCredentials usernamePasswordCredentials() {
-        // pass the user name and password to be used
-        return new UsernamePasswordCredentials(userName, userPassword);
-    }
 
     @Bean
     CommandLineRunner lookup(SOAPConnector soapConnector) {

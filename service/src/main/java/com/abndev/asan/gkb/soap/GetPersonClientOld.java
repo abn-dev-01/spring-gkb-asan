@@ -15,22 +15,18 @@ import org.springframework.ws.client.WebServiceIOException;
 import org.springframework.ws.client.core.WebServiceMessageCallback;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.soap.SoapHeader;
-import org.springframework.ws.soap.SoapHeaderElement;
 import org.springframework.ws.soap.SoapMessage;
-import org.springframework.ws.support.MarshallingUtils;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.namespace.QName;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.dom.DOMResult;
 import java.io.IOException;
 
 @Component
-public class GetPersonClient {
-    private static final Logger LOG = LoggerFactory.getLogger(GetPersonClient.class);
+public class GetPersonClientOld {
+    private static final Logger LOG = LoggerFactory.getLogger(GetPersonClientOld.class);
     public static final String SOAP_USER_ID = "781fceae-563c-4c19-a6c7-4fd0217f0be2";
     @Autowired
     private WebServiceTemplate webServiceTemplate;
@@ -42,7 +38,6 @@ public class GetPersonClient {
     private Boolean proxyEnable;
 
     public Object getPerson() {
-
         ObjectFactory factory = new ObjectFactory();
         GetPerson person = new GetPerson();
         person.setIin("440902700044");
@@ -66,12 +61,19 @@ public class GetPersonClient {
 
                     // create the header element
                     ObjectFactory factory = new ObjectFactory();
+//                                    UserIdSoapHeaders userIdSoapHeader = factory.createUserIdSoapHeaders();
+//                                    userIdSoapHeader.setUserId("781fceae-563c-4c19-a6c7-4fd0217f0be2");
+//                                    JAXBElement<UserIdSoapHeaders> headers = factory.createUserId(userIdSoapHeader);
+//                                    JAXBElement<String> userId = factory.createUserId(SOAP_USER_ID);
                     JAXBElement<String> userId =
                             new JAXBElement<>(new QName("userId"), String.class, SOAP_USER_ID);
 
                     // create a marshaller
                     JAXBContext context = JAXBContext.newInstance(String.class);
                     Marshaller marshaller = context.createMarshaller();
+
+//                                    soapHeader.addHeaderElement(new QName("iserId").)
+//                                    soapHeader.addAttribute(new QName("userId"), SOAP_USER_ID);
 
                     // marshal the headers into the specified result
                     marshaller.marshal(userId, soapHeader.getResult());
@@ -85,27 +87,14 @@ public class GetPersonClient {
                 }
             }
         };
-
+        
         JAXBElement<GetPersonResponse> response = null;
         int counter = 0;
         boolean timeToExit = false;
         while (counter < 3 && !timeToExit) {
             try {
-
-//                response = (JAXBElement<GetPersonResponse>) webServiceTemplate
-//                        .marshalSendAndReceive(getPersonRequest, webServiceMessageCallback);
-
-//                DOMResult responseResult = getDomResult(getPersonRequest);
-
-                // 3
-                WebServiceMessage request = webServiceTemplate.getMessageFactory().createWebServiceMessage();
-                MarshallingUtils.marshal(webServiceTemplate.getMarshaller(), getPersonRequest, request);
-
-                DOMResult responseResult = new DOMResult();
-                webServiceTemplate.sendSourceAndReceiveToResult(request.getPayloadSource(),
-                                                                webServiceMessageCallback,
-                                                                responseResult);
-
+                response = (JAXBElement<GetPersonResponse>) webServiceTemplate
+                        .marshalSendAndReceive(getPersonRequest, webServiceMessageCallback);
                 timeToExit = true;
             }
             catch (Exception exc) {
@@ -117,42 +106,5 @@ public class GetPersonClient {
         }
 
         return response.getValue().getReturn();
-    }
-
-    private DOMResult getDomResult(JAXBElement<GetPerson> getPersonRequest)
-            throws IOException, JAXBException {
-
-        WebServiceMessage request = webServiceTemplate.getMessageFactory().createWebServiceMessage();
-
-        // add userId into Header
-        SoapHeader soapHeader = ((SoapMessage) request).getSoapHeader();
-        JAXBElement<String> userId =
-                new JAXBElement<>(new QName("userId"), String.class, SOAP_USER_ID);
-
-        // create a marshaller
-        JAXBContext context = JAXBContext.newInstance(String.class);
-        Marshaller marshaller = context.createMarshaller();
-
-//        marshaller.marshal(userId, soapHeader.getResult());
-//        MarshallingUtils.marshal(webServiceTemplate.getMarshaller(), userId, request);
-
-//        ObjectFactory factory = new ObjectFactory();
-//        JAXBElement<String> userId = factory.createUserId(SOAP_USER_ID);
-//        header.addAttribute(new QName("userId"), SOAP_USER_ID);
-//        MarshallingUtils.marshal(webServiceTemplate.getMarshaller(), userId, request);
-
-        MarshallingUtils.marshal(webServiceTemplate.getMarshaller(), getPersonRequest, request);
-//        marshaller.marshal(getPersonRequest, ((SoapMessage) request).getSoapBody().getPayloadResult());
-
-        // marshal the headers into the specified result
-        SoapHeaderElement userIdEl =
-                soapHeader.addHeaderElement(new QName("http://schemas.xmlsoap.org/soap/envelope/", "userId"));
-        userIdEl.setText(SOAP_USER_ID);
-
-        // call the service
-        DOMResult result = new DOMResult(); ;
-        webServiceTemplate.sendSourceAndReceiveToResult(request.getPayloadSource(), result);
-
-        return result;
     }
 }
