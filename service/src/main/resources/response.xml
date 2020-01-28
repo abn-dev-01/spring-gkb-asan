@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:getPersonResponse xmlns:ns2="http://data.gbd.chdb.scb.kz/" xmlns:ns3="http://gbd.chdb.scb.kz/xml/person"
+                               xmlns:ns4="http://bip.bee.kz/SyncChannel/v10/Types">
+            <return>
+                <ns3:Person>
+                    <responseInfo>
+                        <messageId>24001cdb-8506-499a-9dd9-6fd8eb41e667</messageId>
+                        <correlationId>a53fa060-3eb3-11ea-8846-005056b90540</correlationId>
+                        <responseDate>2020-01-24T20:10:03.576+06:00</responseDate>
+                        <status>
+                            <code>SCSS001</code>
+                            <message>Message has been processed successfully</message>
+                        </status>
+                        <sessionId>{e4878ba6-b321-4918-a965-a76d2011fb29}</sessionId>
+                    </responseInfo>
+                    <responseData>
+                        <data xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types"
+                              xmlns:ns3="http://bip.bee.kz/SyncChannel/v10/Interfaces">
+                            <messageId>24001cdb-8506-499a-9dd9-6fd8eb41e667</messageId>
+                            <messageDate>2020-01-24T20:10:03.576+06:00</messageDate>
+                            <requestId>a53fa060-3eb3-11ea-8846-005056b90540</requestId>
+                            <sender>
+                                <code>GBDFL</code>
+                                <nameRu>ГБД "Физические лица"</nameRu>
+                                <nameKz>"Жеке түлағалар" МДҚ</nameKz>
+                                <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                            </sender>
+                            <receiver>
+                                <code>GKB</code>
+                                <nameRu>АО "Государственное кредитное бюро" НБ РК</nameRu>
+                                <nameKz>ҚР ҰБ "Мемлекеттік кредиттік бюро" АҚ</nameKz>
+                                <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                            </receiver>
+                            <messageResult>
+                                <code>00000</code>
+                                <nameRu>Сообщение успешно обработано</nameRu>
+                                <nameKz>Хабарлама сәтті өңделді</nameKz>
+                                <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                            </messageResult>
+                            <persons>
+                                <person>
+                                    <iin>440902700044</iin>
+                                    <surname>ТЕСТОВ</surname>
+                                    <name>КОТДУС</name>
+                                    <patronymic>ХАЙРЕДИНОВИЧ</patronymic>
+                                    <birthDate>1944-09-02</birthDate>
+                                    <deathDate>2003-09-02</deathDate>
+                                    <gender>
+                                        <code>1</code>
+                                        <nameRu>Мужской</nameRu>
+                                        <nameKz>Ер</nameKz>
+                                        <changeDate>2013-09-19T09:44:33+06:00</changeDate>
+                                    </gender>
+                                    <nationality>
+                                        <code>049</code>
+                                        <nameRu>ТАТАРИН</nameRu>
+                                        <nameKz>ТАТАР</nameKz>
+                                        <changeDate>2013-09-19T09:45:38+06:00</changeDate>
+                                    </nationality>
+                                    <citizenship>
+                                        <code>398</code>
+                                        <nameRu>КАЗАХСТАН</nameRu>
+                                        <nameKz>ҚАЗАҚСТАН</nameKz>
+                                        <changeDate>2013-09-19T09:45:48+06:00</changeDate>
+                                    </citizenship>
+                                    <lifeStatus>
+                                        <code>2</code>
+                                        <nameRu>Умерший</nameRu>
+                                        <nameKz>Қайтыс болған</nameKz>
+                                        <changeDate>2013-09-19T09:45:30+06:00</changeDate>
+                                    </lifeStatus>
+                                    <deathCertificate>
+                                        <number>7777777</number>
+                                        <issueOrganisation>1</issueOrganisation>
+                                    </deathCertificate>
+                                    <birthPlace>
+                                        <country>
+                                            <code>398</code>
+                                            <nameRu>КАЗАХСТАН</nameRu>
+                                            <nameKz>ҚАЗАҚСТАН</nameKz>
+                                            <changeDate>2013-09-19T09:45:48+06:00</changeDate>
+                                        </country>
+                                        <district>
+                                            <code>1926</code>
+                                            <nameRu>З-КАЗАХСТАНСКАЯ</nameRu>
+                                            <nameKz>БАТ-ҚАЗАҚСТАН</nameKz>
+                                            <changeDate>2013-09-19T09:45:41+06:00</changeDate>
+                                        </district>
+                                        <region>
+                                            <code>1926401</code>
+                                            <nameRu>УРАЛЬСК</nameRu>
+                                            <nameKz>ОРАЛ</nameKz>
+                                            <changeDate>2013-09-19T09:45:30+06:00</changeDate>
+                                        </region>
+                                        <city>ПОС.ЧИНГИРЛАУ</city>
+                                    </birthPlace>
+                                    <regAddress>
+                                        <country>
+                                            <code>398</code>
+                                            <nameRu>КАЗАХСТАН</nameRu>
+                                            <nameKz>ҚАЗАҚСТАН</nameKz>
+                                            <changeDate>2013-09-19T09:45:48+06:00</changeDate>
+                                        </country>
+                                        <district>
+                                            <code>1913</code>
+                                            <nameRu>АСТАНА</nameRu>
+                                            <nameKz>АСТАНА</nameKz>
+                                            <changeDate>2013-09-19T09:45:41+06:00</changeDate>
+                                        </district>
+                                        <region>
+                                            <code>1913203</code>
+                                            <nameRu>АЛМАТЫ РАЙОН</nameRu>
+                                            <nameKz>АЛМАТЫ АУДАНЫ</nameKz>
+                                            <changeDate>2013-09-19T09:45:21+06:00</changeDate>
+                                        </region>
+                                        <city>АЙША БИБИ УЧ.КАРАТАУ</city>
+                                        <street>ТИХАЯ</street>
+                                        <corpus>1- 2</corpus>
+                                        <flat>18Д</flat>
+                                    </regAddress>
+                                    <personCapableStatus>
+                                        <capableStatus>
+                                            <code>003</code>
+                                            <nameRu>НЕДЕЕСПОСОБНЫЙ</nameRu>
+                                            <nameKz>ІС-ӘРЕКЕТКЕ ҚАБІЛЕТСІЗДІК</nameKz>
+                                            <changeDate>2013-09-19T09:45:50+06:00</changeDate>
+                                        </capableStatus>
+                                    </personCapableStatus>
+                                    <excludeStatus>
+                                        <excludeReason>
+                                            <code>8</code>
+                                            <nameRu>Смерть физического лица</nameRu>
+                                            <nameKz>Жеке тұлғаның өлімі</nameKz>
+                                            <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                        </excludeReason>
+                                        <excludeDate>2018-06-21</excludeDate>
+                                    </excludeStatus>
+                                    <documents>
+                                        <document>
+                                            <type>
+                                                <code>002</code>
+                                                <nameRu>УДОСТОВЕРЕНИЕ РК</nameRu>
+                                                <nameKz>ҚР ЖЕКЕ КУӘЛІГІ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </type>
+                                            <number>069560362</number>
+                                            <beginDate>2012-01-09</beginDate>
+                                            <endDate>2022-04-19</endDate>
+                                            <issueOrganization>
+                                                <code>002</code>
+                                                <nameRu>МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РК</nameRu>
+                                                <nameKz>ҚР ІШКІ ІСТЕР МИНИСТРЛІГІ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </issueOrganization>
+                                            <status>
+                                                <code>00</code>
+                                                <nameRu>ДОКУМЕНТ ДЕЙСТВИТЕЛЕН</nameRu>
+                                                <nameKz>ҚҰЖАТ ЖАРАМДЫ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </status>
+                                            <surname>САФИНОВ</surname>
+                                            <name>КОТДУС</name>
+                                            <patronymic>ХАЙРЕДИНОВИЧ</patronymic>
+                                            <birthDate>1944-09-02</birthDate>
+                                        </document>
+                                        <document>
+                                            <type>
+                                                <code>001</code>
+                                                <nameRu>ПАСПОРТ РК</nameRu>
+                                                <nameKz>ҚР ПАСПОРТЫ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </type>
+                                            <number>N5349829</number>
+                                            <beginDate>2008-11-13</beginDate>
+                                            <endDate>2019-05-15</endDate>
+                                            <issueOrganization>
+                                                <code>001</code>
+                                                <nameRu>МИНИСТЕРСТВО ЮСТИЦИИ РК</nameRu>
+                                                <nameKz>ҚР ӘДІЛЕТ МИНИСТРЛІГІ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </issueOrganization>
+                                            <status>
+                                                <code>00</code>
+                                                <nameRu>ДОКУМЕНТ ДЕЙСТВИТЕЛЕН</nameRu>
+                                                <nameKz>ҚҰЖАТ ЖАРАМДЫ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </status>
+                                            <surname>САФИНОВ</surname>
+                                            <name>КОТДУС</name>
+                                            <patronymic>ХАЙРЕДИНОВИЧ</patronymic>
+                                            <birthDate>1944-09-02</birthDate>
+                                        </document>
+                                        <document>
+                                            <type>
+                                                <code>002</code>
+                                                <nameRu>УДОСТОВЕРЕНИЕ РК</nameRu>
+                                                <nameKz>ҚР ЖЕКЕ КУӘЛІГІ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </type>
+                                            <number>918577626</number>
+                                            <beginDate>1997-11-14</beginDate>
+                                            <endDate>2012-01-09</endDate>
+                                            <issueOrganization>
+                                                <code>002</code>
+                                                <nameRu>МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РК</nameRu>
+                                                <nameKz>ҚР ІШКІ ІСТЕР МИНИСТРЛІГІ</nameKz>
+                                                <changeDate>2013-09-19T09:45:40+06:00</changeDate>
+                                            </issueOrganization>
+                                            <status>
+                                                <code>17</code>
+                                                <nameRu>ВЫПУСК НОВОГО ДОКУМЕНТА</nameRu>
+                                                <nameKz>ЖАҢА ҚҰЖАТТЫҢ ШЫҒАРЫЛУЫ</nameKz>
+                                                <changeDate>2013-09-19T09:45:41+06:00</changeDate>
+                                            </status>
+                                            <invalidityDate>2011-12-17</invalidityDate>
+                                            <surname>САФИНОВ</surname>
+                                            <name>КОТДУС</name>
+                                            <patronymic>ХАЙРЕДИНОВИЧ</patronymic>
+                                            <birthDate>1944-09-02</birthDate>
+                                        </document>
+                                    </documents>
+                                    <addresses/>
+                                    <removed>false</removed>
+                                </person>
+                            </persons>
+                            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:SignedInfo>
+                                    <ds:CanonicalizationMethod
+                                            Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                                    <ds:SignatureMethod
+                                            Algorithm="http://www.w3.org/2001/04/xmldsig-more#gost34310-gost34311"/>
+                                    <ds:Reference URI="">
+                                        <ds:Transforms>
+                                            <ds:Transform
+                                                    Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                                            <ds:Transform
+                                                    Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+                                        </ds:Transforms>
+                                        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gost34311"/>
+                                        <ds:DigestValue>6qm/9RvweK1cOznid5hBuTWIW25te5dJ409xPoxFNIE=</ds:DigestValue>
+                                    </ds:Reference>
+                                </ds:SignedInfo>
+                                <ds:SignatureValue>
+                                    GXsXOvoLwAeBadbDVfaOtXAf/YEa4r6DR8GkCvwKYW0V7V1rzEwYTm20jUj5rL9T9GaUj5oOUfJKNMeQ9dEsOQ==
+                                </ds:SignatureValue>
+                                <ds:KeyInfo>
+                                    <ds:X509Data>
+                                        <ds:X509Certificate>
+                                            MIIEwDCCBGqgAwIBAgIUPWK581dGs6pmE/uN9WfWC2LEU+owDQYJKoMOAwoBAQECBQAwUzELMAkGA1UEBhMCS1oxRDBCBgNVBAMMO9Kw0JvQotCi0KvSmiDQmtCj05jQm9CQ0J3QlNCr0KDQo9Co0Ksg0J7QoNCi0JDQm9Cr0pogKEdPU1QpMB4XDTE4MTAxMDA3MDAzMFoXDTE5MTAxMDA3MDAzMFowggFqMTAwLgYDVQQDDCfQkNCa0JzQkNCT0JDQndCR0JXQotCe0JLQkCDQnNCQ0JTQmNCd0JAxIzAhBgNVBAQMGtCQ0JrQnNCQ0JPQkNCd0JHQldCi0J7QktCQMRgwFgYDVQQFEw9JSU44NDA1MTU0NTAxNjYxCzAJBgNVBAYTAktaMRUwEwYDVQQHDAzQkNCh0KLQkNCd0JAxFTATBgNVBAgMDNCQ0KHQotCQ0J3QkDF9MHsGA1UECgx00JDQmtCm0JjQntCd0JXQoNCd0J7QlSDQntCR0KnQldCh0KLQktCeICLQndCQ0KbQmNCe0J3QkNCb0KzQndCr0JUg0JjQndCk0J7QoNCc0JDQptCY0J7QndCd0KvQlSDQotCV0KXQndCe0JvQntCT0JjQmCIxGDAWBgNVBAsMD0JJTjAwMDc0MDAwMDcyODEjMCEGA1UEKgwa0JHQldCa0KLQo9Cg0KHQq9Cd0J7QktCd0JAwbDAlBgkqgw4DCgEBAQEwGAYKKoMOAwoBAQEBAQYKKoMOAwoBAwEBAANDAARAl8CVlVBBKEhK9OJ4mxy5bd2svMYuHyciKFyNPhvQhJbn+Sg/nJ5NaciLsDDlQxqb5aJc73cRBhP+aGNVqfPQLqOCAeswggHnMA4GA1UdDwEB/wQEAwIGwDAoBgNVHSUEITAfBggrBgEFBQcDBAYIKoMOAwMEAQIGCSqDDgMDBAECBTAPBgNVHSMECDAGgARbanPpMB0GA1UdDgQWBBSm7kG8zi3it7tcpxFczgE/EUJSdDBeBgNVHSAEVzBVMFMGByqDDgMDAgEwSDAhBggrBgEFBQcCARYVaHR0cDovL3BraS5nb3Yua3ovY3BzMCMGCCsGAQUFBwICMBcMFWh0dHA6Ly9wa2kuZ292Lmt6L2NwczBYBgNVHR8EUTBPME2gS6BJhiJodHRwOi8vY3JsLnBraS5nb3Yua3ovbmNhX2dvc3QuY3JshiNodHRwOi8vY3JsMS5wa2kuZ292Lmt6L25jYV9nb3N0LmNybDBcBgNVHS4EVTBTMFGgT6BNhiRodHRwOi8vY3JsLnBraS5nb3Yua3ovbmNhX2RfZ29zdC5jcmyGJWh0dHA6Ly9jcmwxLnBraS5nb3Yua3ovbmNhX2RfZ29zdC5jcmwwYwYIKwYBBQUHAQEEVzBVMC8GCCsGAQUFBzAChiNodHRwOi8vcGtpLmdvdi5rei9jZXJ0L25jYV9nb3N0LmNlcjAiBggrBgEFBQcwAYYWaHR0cDovL29jc3AucGtpLmdvdi5rejANBgkqgw4DCgEBAQIFAANBAP72/gqCanYc2/suk/KeFSWCA3kU+gs6rwB/ahIAlnWx3sZ/Daqe4H6Up66tKXBHKgbNr8ImUMQxhmx/ZPwAm6M=
+                                        </ds:X509Certificate>
+                                    </ds:X509Data>
+                                </ds:KeyInfo>
+                            </ds:Signature>
+                        </data>
+                    </responseData>
+                </ns3:Person>
+            </return>
+        </ns2:getPersonResponse>
+    </soap:Body>
+</soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header>
+    <userId>781fceae-563c-4c19-a6c7-4fd0217f0be2</userId>
+    <userId>781fceae-563c-4c19-a6c7-4fd0217f0be2</userId>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+    <ns3:getPerson xmlns:ns3="http://data.gbd.chdb.scb.kz/" xmlns:ns4="http://gbd.chdb.scb.kz/xml/person"
+                   xmlns:ns5="http://bip.bee.kz/SyncChannel/v10/Types">
+        <iin>440902700044</iin>
+        <consentConfirmed>true</consentConfirmed>
+    </ns3:getPerson>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]
