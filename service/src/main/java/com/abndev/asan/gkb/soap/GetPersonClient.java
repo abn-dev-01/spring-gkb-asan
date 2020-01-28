@@ -41,7 +41,7 @@ public class GetPersonClient {
     @Value("${soap.client.proxy.enable}")
     private Boolean proxyEnable;
 
-    public Object getPerson() {
+    public DOMResult getPerson() {
 
         ObjectFactory factory = new ObjectFactory();
         GetPerson person = new GetPerson();
@@ -89,6 +89,8 @@ public class GetPersonClient {
         JAXBElement<GetPersonResponse> response = null;
         int counter = 0;
         boolean timeToExit = false;
+        DOMResult responseResult = new DOMResult();
+
         while (counter < 3 && !timeToExit) {
             try {
 
@@ -101,7 +103,6 @@ public class GetPersonClient {
                 WebServiceMessage request = webServiceTemplate.getMessageFactory().createWebServiceMessage();
                 MarshallingUtils.marshal(webServiceTemplate.getMarshaller(), getPersonRequest, request);
 
-                DOMResult responseResult = new DOMResult();
                 webServiceTemplate.sendSourceAndReceiveToResult(request.getPayloadSource(),
                                                                 webServiceMessageCallback,
                                                                 responseResult);
@@ -116,7 +117,7 @@ public class GetPersonClient {
             }
         }
 
-        return response.getValue().getReturn();
+        return responseResult;
     }
 
     private DOMResult getDomResult(JAXBElement<GetPerson> getPersonRequest)
