@@ -314,7 +314,8 @@
 
     <wsdl:service name="PersonDetailsImplService">
         <wsdl:port binding="tns:PersonDetailsImplServiceSoapBinding" name="PersonDetailsImplPort">
-            <soap:address location="https://testscbws.mkb.kz/gbdServices/PersonDetailsImplService"/>
+<!--            <soap:address location="https://testscbws.mkb.kz/gbdServices/PersonDetailsImplService"/>-->
+            <soap:address location="http://nb-asus-abn:8088/mockPersonDetailsImplServiceSoapBinding"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

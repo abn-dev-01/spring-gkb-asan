@@ -23,7 +23,11 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.util.JAXBResult;
 import javax.xml.namespace.QName;
+import javax.xml.soap.SAAJResult;
+import javax.xml.soap.SOAPException;
+import javax.xml.transform.Result;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.dom.DOMResult;
 import java.io.IOException;
@@ -41,7 +45,8 @@ public class GetPersonClient {
     @Value("${soap.client.proxy.enable}")
     private Boolean proxyEnable;
 
-    public DOMResult getPerson() {
+    public Result getPerson()
+            throws SOAPException {
 
         ObjectFactory factory = new ObjectFactory();
         GetPerson person = new GetPerson();
@@ -89,7 +94,8 @@ public class GetPersonClient {
         JAXBElement<GetPersonResponse> response = null;
         int counter = 0;
         boolean timeToExit = false;
-        DOMResult responseResult = new DOMResult();
+//        DOMResult responseResult = new DOMResult();
+        JAXBResult responseResult = new JAXBResult();
 
         while (counter < 3 && !timeToExit) {
             try {
