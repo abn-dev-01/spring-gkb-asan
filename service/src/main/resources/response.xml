@@ -9,10 +9,10 @@
                         <messageId>24001cdb-8506-499a-9dd9-6fd8eb41e667</messageId>
                         <correlationId>a53fa060-3eb3-11ea-8846-005056b90540</correlationId>
                         <responseDate>2020-01-24T20:10:03.576+06:00</responseDate>
-                        <status>
+                        <responseStatus>
                             <code>SCSS001</code>
                             <message>Message has been processed successfully</message>
-                        </status>
+                        </responseStatus>
                         <sessionId>{e4878ba6-b321-4918-a965-a76d2011fb29}</sessionId>
                     </responseInfo>
                     <responseData>
@@ -121,12 +121,12 @@
                                         <flat>18Д</flat>
                                     </regAddress>
                                     <personCapableStatus>
-                                        <capableStatus>
+                                        <capableStatusDict>
                                             <code>003</code>
                                             <nameRu>НЕДЕЕСПОСОБНЫЙ</nameRu>
                                             <nameKz>ІС-ӘРЕКЕТКЕ ҚАБІЛЕТСІЗДІК</nameKz>
                                             <changeDate>2013-09-19T09:45:50+06:00</changeDate>
-                                        </capableStatus>
+                                        </capableStatusDict>
                                     </personCapableStatus>
                                     <excludeStatus>
                                         <excludeReason>
@@ -154,12 +154,12 @@
                                                 <nameKz>ҚР ІШКІ ІСТЕР МИНИСТРЛІГІ</nameKz>
                                                 <changeDate>2013-09-19T09:45:40+06:00</changeDate>
                                             </issueOrganization>
-                                            <status>
+                                            <responseStatus>
                                                 <code>00</code>
                                                 <nameRu>ДОКУМЕНТ ДЕЙСТВИТЕЛЕН</nameRu>
                                                 <nameKz>ҚҰЖАТ ЖАРАМДЫ</nameKz>
                                                 <changeDate>2013-09-19T09:45:40+06:00</changeDate>
-                                            </status>
+                                            </responseStatus>
                                             <surname>САФИНОВ</surname>
                                             <name>КОТДУС</name>
                                             <patronymic>ХАЙРЕДИНОВИЧ</patronymic>
@@ -181,12 +181,12 @@
                                                 <nameKz>ҚР ӘДІЛЕТ МИНИСТРЛІГІ</nameKz>
                                                 <changeDate>2013-09-19T09:45:40+06:00</changeDate>
                                             </issueOrganization>
-                                            <status>
+                                            <responseStatus>
                                                 <code>00</code>
                                                 <nameRu>ДОКУМЕНТ ДЕЙСТВИТЕЛЕН</nameRu>
                                                 <nameKz>ҚҰЖАТ ЖАРАМДЫ</nameKz>
                                                 <changeDate>2013-09-19T09:45:40+06:00</changeDate>
-                                            </status>
+                                            </responseStatus>
                                             <surname>САФИНОВ</surname>
                                             <name>КОТДУС</name>
                                             <patronymic>ХАЙРЕДИНОВИЧ</patronymic>
@@ -208,12 +208,12 @@
                                                 <nameKz>ҚР ІШКІ ІСТЕР МИНИСТРЛІГІ</nameKz>
                                                 <changeDate>2013-09-19T09:45:40+06:00</changeDate>
                                             </issueOrganization>
-                                            <status>
+                                            <responseStatus>
                                                 <code>17</code>
                                                 <nameRu>ВЫПУСК НОВОГО ДОКУМЕНТА</nameRu>
                                                 <nameKz>ЖАҢА ҚҰЖАТТЫҢ ШЫҒАРЫЛУЫ</nameKz>
                                                 <changeDate>2013-09-19T09:45:41+06:00</changeDate>
-                                            </status>
+                                            </responseStatus>
                                             <invalidityDate>2011-12-17</invalidityDate>
                                             <surname>САФИНОВ</surname>
                                             <name>КОТДУС</name>

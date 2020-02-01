@@ -1,15 +1,36 @@
 package com.abndev.asan.gkb.dom;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
+@Entity
+@Table(name = "certificate_birth")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CertificateUnit {
+public class CertificateBirth {
+
+    @Id
+    @Column(length = 32)
     private String number;
+    @Column(name = "issue_organisation", length = 32)
     private String issueOrganisation;
+    @Column(name = "begin_date", length = 32)
     private String beginDate;
 
-    public CertificateUnit() {
+    public CertificateBirth() {
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("CertificateDeath{");
+        sb.append("number='").append(number).append('\'');
+        sb.append(", issueOrganisation='").append(issueOrganisation).append('\'');
+        sb.append(", beginDate='").append(beginDate).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 
     public String getNumber() {

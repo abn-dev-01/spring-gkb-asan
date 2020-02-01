@@ -16,12 +16,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.ws.client.core.WebServiceTemplate;
 
 import javax.xml.bind.util.JAXBResult;
 import javax.xml.transform.Result;
 
 @SpringBootApplication
+@EnableTransactionManagement
 public class GkbApplication {
 
     public static final String SOAP_SERVICE_URL = "soap.service.url";
@@ -135,12 +137,6 @@ public class GkbApplication {
             if (args.length > 0) {
                 name = args[0];
             }
-//            StudentDetailsRequest request = new StudentDetailsRequest();
-//            request.setName(name);
-//            StudentDetailsResponse response = (StudentDetailsResponse) soapConnector.callWebService(
-//                    "http://localhost:8080/service/student-details",
-//                    request);
-
             Result result = client.getPerson();
 
             PersonResponse personResponse = (PersonResponse) ((JAXBResult) result).getResult();

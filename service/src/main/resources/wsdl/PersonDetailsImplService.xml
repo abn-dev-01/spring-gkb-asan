@@ -339,7 +339,7 @@
       
       <xs:element name="responseDate" type="xs:dateTime"/>
       
-      <xs:element name="status" type="ns1:StatusInfo"/>
+      <xs:element name="responseStatus" type="ns1:StatusInfo"/>
       
       <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
     

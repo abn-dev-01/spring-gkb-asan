@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name = "receiver")
+@Table(name = "dict_receiver")
 public class ReceiverDict {
 
     @Id

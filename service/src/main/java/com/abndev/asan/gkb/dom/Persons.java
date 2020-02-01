@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -20,13 +21,12 @@ import java.util.Set;
 public class Persons {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @SequenceGenerator(name = "persons_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "persons_seq")
     @XmlTransient
     private Integer gid;
 
-    //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "persons", orphanRemoval = true)
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-//    @JoinColumn(name = "persons_id") // Column name in the remote Table
     @XmlElement(name = "person")
     private Set<PersonInfo> personInfos;
 

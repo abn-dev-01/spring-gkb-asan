@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlElement;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name = "sender")
+@Table(name = "dict_sender")
 public class SenderDict {
 
     @Id

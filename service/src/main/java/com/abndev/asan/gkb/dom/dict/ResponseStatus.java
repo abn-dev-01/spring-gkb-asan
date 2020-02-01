@@ -10,8 +10,8 @@ import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name = "status")
-public class Status {
+@Table(name = "response_status")
+public class ResponseStatus {
 
     @Id
     @Column(unique = true, length = 16, name = "code")
@@ -22,7 +22,16 @@ public class Status {
     @XmlElement(name = "message")
     private String message;
 
-    public Status() {
+    public ResponseStatus() {
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("ResponseStatus{");
+        sb.append("code='").append(code).append('\'');
+        sb.append(", message='").append(message).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 
     public String getCode() {

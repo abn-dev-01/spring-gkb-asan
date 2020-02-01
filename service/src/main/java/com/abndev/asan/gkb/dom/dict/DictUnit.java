@@ -1,49 +1,49 @@
 package com.abndev.asan.gkb.dom.dict;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
+import javax.persistence.MappedSuperclass;
 import javax.xml.bind.annotation.XmlElement;
 
-@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlAccessorType(XmlAccessType.FIELD)
 //@Entity
 //@Table(name = "dict_unit")
-public class DictUnit {
+//@MappedSuperclass
+public abstract class DictUnit {
 
-//    @Id
 //    @GeneratedValue(strategy = GenerationType.TABLE)
 //    private Integer gid;
 
+//    @Id
 //    @Column(name = "code")
-    @XmlElement(name = "code")
+//    @XmlElement(name = "code")
     private String code;
 
 //    @Column(name = "name_ru")
-    @XmlElement(name = "nameRu")
+//    @XmlElement(name = "nameRu")
     private String nameRu;
 
 //    @Column(name = "name_kz")
-    @XmlElement(name = "nameKz")
+//    @XmlElement(name = "nameKz")
     private String nameKz;
 
 //    @Column(name = "change_date")
-    @XmlElement(name = "changeDate")
+//    @XmlElement(name = "changeDate")
     private String changeDate;
 
     public DictUnit() {
     }
 
-//    public Integer getGid() {
-//        return gid;
-//    }
-//    public void setGid(Integer gid) {
-//        this.gid = gid;
-//    }
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("DictUnit{");
+        sb.append("code='").append(code).append('\'');
+        sb.append(", nameRu='").append(nameRu).append('\'');
+        sb.append(", nameKz='").append(nameKz).append('\'');
+        sb.append(", changeDate='").append(changeDate).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 
     public String getCode() {
         return code;

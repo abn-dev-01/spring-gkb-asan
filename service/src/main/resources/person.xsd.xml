@@ -271,7 +271,7 @@
                     <xs:documentation>Дата снятия с регистрации по адресу прописки</xs:documentation>  
                 </xs:annotation>  
             </xs:element>  
-            <xs:element name="status" type="ns1:AddressStatus" nillable="true" minOccurs="0">  
+            <xs:element name="responseStatus" type="ns1:AddressStatus" nillable="true" minOccurs="0">  
                 <xs:annotation>  
                     <xs:documentation>Признак регистрации (зарегистрирован/снят с регистрации)</xs:documentation>  
                 </xs:annotation>  
@@ -294,7 +294,7 @@
             <xs:documentation>Сведения о дееспособности. Также содержит сведения о осуждении по статьям 192, 216, 217 УК</xs:documentation>  
         </xs:annotation>  
         <xs:sequence>  
-            <xs:element name="capableStatus" type="ns1:CapableStatus">  
+            <xs:element name="capableStatusDict" type="ns1:CapableStatus">  
                 <xs:annotation>  
                     <xs:documentation>Статус дееспособности</xs:documentation>  
                 </xs:annotation>  

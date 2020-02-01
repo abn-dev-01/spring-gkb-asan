@@ -1,6 +1,6 @@
 package com.abndev.asan.gkb.dom;
 
-import com.abndev.asan.gkb.dom.dict.Status;
+import com.abndev.asan.gkb.dom.dict.ResponseStatus;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -37,11 +37,11 @@ public class ResponseInfo {
     @XmlElement(name = "responseDate")
     private String responseDate;
 
-    @XmlElement(name = "status")
-//    @Column(name = "status")
+    @XmlElement(name = "responseStatus")
+//    @Column(name = "responseStatus")
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "status_id")   // field, created in this table
-    private Status status;
+    @JoinColumn(name = "response_status_id")   // field, created in this table
+    private ResponseStatus responseStatus;
 
     @Column(name = "session_id")
     @XmlElement(name = "sessionId")
@@ -56,7 +56,7 @@ public class ResponseInfo {
         sb.append("messageId='").append(messageId).append('\'');
         sb.append(", correlationId='").append(correlationId).append('\'');
         sb.append(", responseDate='").append(responseDate).append('\'');
-        sb.append(", status=").append(status);
+        sb.append(", responseStatus=").append(responseStatus);
         sb.append(", sessionId='").append(sessionId).append('\'');
         sb.append('}');
         return sb.toString();
@@ -94,12 +94,12 @@ public class ResponseInfo {
         this.responseDate = responseDate;
     }
 
-    public Status getStatus() {
-        return status;
+    public ResponseStatus getResponseStatus() {
+        return responseStatus;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setResponseStatus(ResponseStatus responseStatus) {
+        this.responseStatus = responseStatus;
     }
 
     public String getSessionId() {

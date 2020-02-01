@@ -2,6 +2,8 @@ package com.abndev.asan.gkb.dom.dict;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,27 +12,38 @@ import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name = "dict_message_result")
-public class MessageResultDict {
+@Table(name = "dict_gender")
+public class GenderDict {
 
     @Id
-    @Column(name = "code")
+    @Column(name = "code", length = 16)
     @XmlElement(name = "code")
     private String code;
 
-    @Column(name = "name_ru")
+    @Column(name = "name_ru", length = 255)
     @XmlElement(name = "nameRu")
     private String nameRu;
 
-    @Column(name = "name_kz")
+    @Column(name = "name_kz", length = 255)
     @XmlElement(name = "nameKz")
     private String nameKz;
 
-    @Column(name = "change_date")
+    @Column(name = "change_date", length = 32, nullable = true)
     @XmlElement(name = "changeDate")
     private String changeDate;
 
-    public MessageResultDict() {
+    public GenderDict() {
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("GenderDict{");
+        sb.append("code='").append(code).append('\'');
+        sb.append(", nameRu='").append(nameRu).append('\'');
+        sb.append(", nameKz='").append(nameKz).append('\'');
+        sb.append(", changeDate='").append(changeDate).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 
     public String getCode() {
@@ -64,4 +77,6 @@ public class MessageResultDict {
     public void setChangeDate(String changeDate) {
         this.changeDate = changeDate;
     }
+
+
 }
