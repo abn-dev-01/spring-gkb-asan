@@ -1,5 +1,7 @@
 package com.abndev.asan.gkb.dom;
 
+import com.abndev.asan.gkb.dom.dict.DictUnit;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 

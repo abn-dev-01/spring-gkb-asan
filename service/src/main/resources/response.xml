@@ -27,18 +27,18 @@
                                 <nameKz>"Жеке түлағалар" МДҚ</nameKz>
                                 <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                             </sender>
-                            <receiverOrm>
+                            <receiverDict>
                                 <code>GKB</code>
                                 <nameRu>АО "Государственное кредитное бюро" НБ РК</nameRu>
                                 <nameKz>ҚР ҰБ "Мемлекеттік кредиттік бюро" АҚ</nameKz>
                                 <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                            </receiverOrm>
-                            <messageResult>
+                            </receiverDict>
+                            <messageResultDict>
                                 <code>00000</code>
                                 <nameRu>Сообщение успешно обработано</nameRu>
                                 <nameKz>Хабарлама сәтті өңделді</nameKz>
                                 <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                            </messageResult>
+                            </messageResultDict>
                             <persons>
                                 <person>
                                     <iin>440902700044</iin>

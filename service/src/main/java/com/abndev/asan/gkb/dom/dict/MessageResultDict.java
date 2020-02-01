@@ -1,4 +1,4 @@
-package com.abndev.asan.gkb.dom;
+package com.abndev.asan.gkb.dom.dict;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,27 +10,27 @@ import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name = "sender")
-public class SenderOrm {
+@Table(name = "message_result")
+public class MessageResultDict {
 
     @Id
-    @Column(name = "code", length = 16)
+    @Column(name = "code")
     @XmlElement(name = "code")
     private String code;
 
-    @Column(name = "name_ru", length = 255)
+    @Column(name = "name_ru")
     @XmlElement(name = "nameRu")
     private String nameRu;
 
-    @Column(name = "name_kz", length = 255)
+    @Column(name = "name_kz")
     @XmlElement(name = "nameKz")
     private String nameKz;
 
-    @Column(name = "change_date", length = 32)
+    @Column(name = "change_date")
     @XmlElement(name = "changeDate")
     private String changeDate;
 
-    public SenderOrm() {
+    public MessageResultDict() {
     }
 
     public String getCode() {

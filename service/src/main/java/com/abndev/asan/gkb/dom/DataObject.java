@@ -1,5 +1,9 @@
 package com.abndev.asan.gkb.dom;
 
+import com.abndev.asan.gkb.dom.dict.MessageResultDict;
+import com.abndev.asan.gkb.dom.dict.ReceiverDict;
+import com.abndev.asan.gkb.dom.dict.SenderDict;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,11 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
@@ -38,19 +40,19 @@ public class DataObject {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "sender_id")   // field, created in this table
     @XmlElement(name = "sender")
-    private SenderOrm sender;
+    private SenderDict sender;
 
     //    @Column(name = "receiver")
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "receiver_id")   // field, created in this table
     @XmlElement(name = "receiver")
-    private ReceiverOrm receiverOrm;
+    private ReceiverDict receiverDict;
 
     //    @Column(name = "message_result")
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "message_result_id")   // field, created in this table
-    @XmlElement(name = "messageResult")
-    private MessageResult messageResult;
+    @XmlElement(name = "messageResultDict")
+    private MessageResultDict messageResultDict;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "persons_id")   // field, created in this table
@@ -85,28 +87,28 @@ public class DataObject {
         this.requestId = requestId;
     }
 
-    public SenderOrm getSender() {
+    public SenderDict getSender() {
         return sender;
     }
 
-    public void setSender(SenderOrm sender) {
+    public void setSender(SenderDict sender) {
         this.sender = sender;
     }
 
-    public ReceiverOrm getReceiverOrm() {
-        return receiverOrm;
+    public ReceiverDict getReceiverDict() {
+        return receiverDict;
     }
 
-    public void setReceiverOrm(ReceiverOrm receiverOrm) {
-        this.receiverOrm = receiverOrm;
+    public void setReceiverDict(ReceiverDict receiverDict) {
+        this.receiverDict = receiverDict;
     }
 
-    public MessageResult getMessageResult() {
-        return messageResult;
+    public MessageResultDict getMessageResultDict() {
+        return messageResultDict;
     }
 
-    public void setMessageResult(MessageResult messageResult) {
-        this.messageResult = messageResult;
+    public void setMessageResultDict(MessageResultDict messageResultDict) {
+        this.messageResultDict = messageResultDict;
     }
 
     public Persons getPersons() {

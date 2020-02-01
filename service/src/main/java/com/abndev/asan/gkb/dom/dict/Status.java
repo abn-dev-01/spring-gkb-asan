@@ -1,4 +1,4 @@
-package com.abndev.asan.gkb.dom;
+package com.abndev.asan.gkb.dom.dict;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.abndev.asan.gkb.dom;
+package com.abndev.asan.gkb.dom.dict;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 @Table(name = "receiver")
-public class ReceiverOrm {
+public class ReceiverDict {
 
     @Id
     @Column(name = "code")
@@ -30,7 +30,7 @@ public class ReceiverOrm {
     @XmlElement(name = "changeDate")
     private String changeDate;
 
-    public ReceiverOrm() {
+    public ReceiverDict() {
     }
 
     public String getCode() {

@@ -1,20 +1,13 @@
 package com.abndev.asan.gkb.dom;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.abndev.asan.gkb.dom.dict.DictUnit;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-import java.util.List;
 
 @Entity
 @Table(name = "person_info")
@@ -25,11 +18,6 @@ public class PersonInfo {
     @Id
     @Column(length = 16, nullable = false)
     private String iin;
-
-//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinColumn(name = "persons_id", nullable = true) // field, created in this table
-//    @XmlTransient
-//    private Persons persons;
 
     @Column
     private String surname;
@@ -42,7 +30,7 @@ public class PersonInfo {
     @Column
     private String deathDate;
 
-//    private DictUnit gender;
+    private DictUnit gender;
 //    private DictUnit nationality;
 //    private DictUnit citizenship;
 //    private DictUnit lifeStatus;

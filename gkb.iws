@@ -2,44 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64b76bc1-656e-46d8-a9e2-97a1b3ca8ad4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/BirthPlace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/CertificateUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DataObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DictUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DisappearStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Documents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Envelope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ExcludeStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ForeignData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/MessageResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/MissingStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonCapableStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Persons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ReceiverOrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RegAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RegAddresses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RepatriationStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ResponseDataObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ResponseInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ReturnObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/SenderOrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DataObjectRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/PersonOrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/ResponseInfoRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/resources/document.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/resources/person.xsd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gkb.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/gkb.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gkb.iws" beforeDir="false" afterPath="$PROJECT_DIR$/gkb.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/GkbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/GkbApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/BirthPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/BirthPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DataObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DataObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DictUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/DictUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ExcludeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ExcludeStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonCapableStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonCapableStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ReceiverOrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/ReceiverDict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RegAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RegAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ResponseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ResponseInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/SenderOrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/SenderDict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/resources/response.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/response.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +178,7 @@
       <workItem from="1579716898332" duration="89000" />
       <workItem from="1579717097586" duration="53104000" />
       <workItem from="1580205093972" duration="38257000" />
-      <workItem from="1580498107196" duration="1889000" />
+      <workItem from="1580498107196" duration="2482000" />
     </task>
     <task id="LOCAL-00002" summary="start">
       <created>1579723889464</created>
@@ -268,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580250239960</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ORM by PersonInfo">
+      <created>1580550360777</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580550360777</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +265,8 @@
     <MESSAGE value="XML" />
     <MESSAGE value="SCHEMA" />
     <MESSAGE value="JAXB" />
-    <option name="LAST_COMMIT_MESSAGE" value="JAXB" />
+    <MESSAGE value="ORM by PersonInfo" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORM by PersonInfo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="350" y="165" width="1345" height="819" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580498036167">
@@ -300,9 +283,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="671" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1579716931598" />
-    <state x="745" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580419610001">
+    <state x="745" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580550852086">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state x="745" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580550852086" />
     <state x="745" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580419610001" />
     <state x="-1798" y="27" width="1642" height="901" key="#xdebugger.evaluate" timestamp="1580321897919">
       <screen x="-1920" y="0" width="1920" height="1080" />
@@ -310,10 +294,10 @@
     <state x="227" y="243" width="1505" height="593" key="#xdebugger.evaluate/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580254469058" />
     <state x="-1798" y="27" width="1642" height="901" key="#xdebugger.evaluate/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580321897919" />
     <state x="316" y="488" width="1009" height="448" key="#xdebugger.evaluate/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579876257415" />
-    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2" timestamp="1580250239037">
+    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2" timestamp="1580550359556">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580250239037" />
+    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580550359556" />
     <state width="1347" height="466" key="DebuggerActiveHint" timestamp="1580416000039">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>

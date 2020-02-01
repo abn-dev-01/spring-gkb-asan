@@ -1,5 +1,7 @@
 package com.abndev.asan.gkb.dom;
 
+import com.abndev.asan.gkb.dom.dict.Status;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
