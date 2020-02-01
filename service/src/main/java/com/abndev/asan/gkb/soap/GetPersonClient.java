@@ -1,5 +1,7 @@
 package com.abndev.asan.gkb.soap;
 
+import com.abndev.asan.gkb.dom.Envelope;
+import com.abndev.asan.gkb.dom.PersonResponse;
 import com.abndev.asan.gkb.person.schema.GetPerson;
 import com.abndev.asan.gkb.person.schema.GetPersonResponse;
 import com.abndev.asan.gkb.person.schema.ObjectFactory;
@@ -23,6 +25,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.util.JAXBResult;
 import javax.xml.namespace.QName;
 import javax.xml.soap.SAAJResult;
@@ -46,7 +49,7 @@ public class GetPersonClient {
     private Boolean proxyEnable;
 
     public Result getPerson()
-            throws SOAPException {
+            throws SOAPException, JAXBException {
 
         ObjectFactory factory = new ObjectFactory();
         GetPerson person = new GetPerson();
@@ -95,7 +98,11 @@ public class GetPersonClient {
         int counter = 0;
         boolean timeToExit = false;
 //        DOMResult responseResult = new DOMResult();
-        JAXBResult responseResult = new JAXBResult();
+
+//        JAXBContext jaxbContext = JAXBContext.newInstance(Envelope.class);
+        JAXBContext jaxbContext = JAXBContext.newInstance(PersonResponse.class);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        JAXBResult responseResult = new JAXBResult(unmarshaller);
 
         while (counter < 3 && !timeToExit) {
             try {

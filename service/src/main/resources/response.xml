@@ -27,12 +27,12 @@
                                 <nameKz>"Жеке түлағалар" МДҚ</nameKz>
                                 <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                             </sender>
-                            <receiver>
+                            <receiverOrm>
                                 <code>GKB</code>
                                 <nameRu>АО "Государственное кредитное бюро" НБ РК</nameRu>
                                 <nameKz>ҚР ҰБ "Мемлекеттік кредиттік бюро" АҚ</nameKz>
                                 <changeDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                            </receiver>
+                            </receiverOrm>
                             <messageResult>
                                 <code>00000</code>
                                 <nameRu>Сообщение успешно обработано</nameRu>

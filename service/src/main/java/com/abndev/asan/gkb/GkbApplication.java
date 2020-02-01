@@ -1,6 +1,9 @@
 package com.abndev.asan.gkb;
 
+import com.abndev.asan.gkb.dom.PersonResponse;
+import com.abndev.asan.gkb.person.schema.Person;
 import com.abndev.asan.gkb.soap.GetPersonClient;
+import com.abndev.asan.gkb.soap.PersonService;
 import com.abndev.asan.gkb.soap.SOAPConnector;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -15,6 +18,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.ws.client.core.WebServiceTemplate;
 
+import javax.xml.bind.util.JAXBResult;
+import javax.xml.transform.Result;
+
 @SpringBootApplication
 public class GkbApplication {
 
@@ -27,6 +33,8 @@ public class GkbApplication {
 
     @Autowired
     private GetPersonClient client;
+    @Autowired
+    private PersonService personService;
 
     //    @Value("${soap.client.user.name}")
     private String userName;
@@ -120,7 +128,6 @@ public class GkbApplication {
 //        return msgSender;
 //    }
 
-
     @Bean
     CommandLineRunner lookup(SOAPConnector soapConnector) {
         return args -> {
@@ -134,7 +141,11 @@ public class GkbApplication {
 //                    "http://localhost:8080/service/student-details",
 //                    request);
 
-            Object result = client.getPerson();
+            Result result = client.getPerson();
+
+            PersonResponse personResponse = (PersonResponse) ((JAXBResult) result).getResult();
+            personService.store(personResponse);
+
 
             System.out.println("Got Response As below ========= : ");
             System.out.println("Result : " + result);
