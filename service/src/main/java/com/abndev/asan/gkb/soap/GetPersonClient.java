@@ -1,6 +1,5 @@
 package com.abndev.asan.gkb.soap;
 
-import com.abndev.asan.gkb.dom.Envelope;
 import com.abndev.asan.gkb.dom.PersonResponse;
 import com.abndev.asan.gkb.person.schema.GetPerson;
 import com.abndev.asan.gkb.person.schema.GetPersonResponse;
@@ -29,7 +28,6 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.util.JAXBResult;
 import javax.xml.namespace.QName;
-import javax.xml.soap.SAAJResult;
 import javax.xml.soap.SOAPException;
 import javax.xml.transform.Result;
 import javax.xml.transform.TransformerException;
@@ -48,6 +46,12 @@ public class GetPersonClient {
     private String userPassword;
     @Value("${soap.client.proxy.enable}")
     private Boolean proxyEnable;
+    @Value("${soap.client.proxy.host}")
+    private String proxyHost;
+    @Value("${soap.client.proxy.port}")
+    private int proxyPort;
+    @Value("${soap.client.try.reconnect}")
+    private int tryReconnect;
 
     public Result getPerson(MessageRequest messageRequest)
             throws SOAPException, JAXBException {
@@ -64,7 +68,7 @@ public class GetPersonClient {
         SSLTool.disableCertificateValidation();
 
         // set a HttpComponentsMessageSender which provides support for basic authentication
-        HttpConnector httpConnector = new HttpConnector(userName, userPassword, proxyEnable);
+        HttpConnector httpConnector = new HttpConnector(userName, userPassword, proxyEnable, proxyHost, proxyPort);
         webServiceTemplate.setMessageSender(httpConnector.httpComponentsMessageSender());
 
         WebServiceMessageCallback webServiceMessageCallback = new WebServiceMessageCallback() {
@@ -107,7 +111,9 @@ public class GetPersonClient {
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         JAXBResult responseResult = new JAXBResult(unmarshaller);
 
-        while (counter < 3 && !timeToExit) {
+        tryReconnect = tryReconnect == 0 ? 1 : tryReconnect;
+
+        while (counter < tryReconnect && !timeToExit) {
             try {
 
 //                response = (JAXBElement<GetPersonResponse>) webServiceTemplate
@@ -127,9 +133,9 @@ public class GetPersonClient {
             }
             catch (Exception exc) {
                 LOG.error("Loading SOAP failed.", exc);
-                if (exc instanceof WSTimeoutException) {
-                    counter++;
-                }
+//                if (exc instanceof WSTimeoutException) {
+                counter++;
+//                }
             }
         }
 
@@ -167,7 +173,7 @@ public class GetPersonClient {
         userIdEl.setText(SOAP_USER_ID);
 
         // call the service
-        DOMResult result = new DOMResult(); ;
+        DOMResult result = new DOMResult();
         webServiceTemplate.sendSourceAndReceiveToResult(request.getPayloadSource(), result);
 
         return result;

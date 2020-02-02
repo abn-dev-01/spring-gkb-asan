@@ -27,24 +27,43 @@ public class HttpConnector {
     private static final Logger LOG = LoggerFactory.getLogger(HttpConnector.class);
     public static final String CREATING_SSLCONTEXT_FAILED = "Creating SSLContext failed.";
 
-//    public static final String PROXY_HOST = "193.193.240.37"; // 193.193.240.37:45944
-    public static final String PROXY_HOST = "91.135.194.22"; // 91.135.194.22:56828
-    public static final int PROXY_PORT = 56828;
+    //    public static final String PROXY_HOST = "193.193.240.37"; // 193.193.240.37:45944
+//    public static final String PROXY_HOST = "91.135.194.22"; // 91.135.194.22:56828
+//    public static final int PROXY_PORT = 56828;
     public static final String USER_AGENT =
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36";
 
     private String userName;
     private String userPassword;
     private boolean proxyEnable;
+    private String proxyHost;
+    private int proxyPort;
 
-    public HttpConnector(String userName, String userPassword, boolean proxyEnable) {
+    /**
+     * Constructor.
+     *
+     * @param userName
+     * @param userPassword
+     * @param proxyEnable
+     * @param proxyHost
+     * @param proxyPort
+     */
+    public HttpConnector(
+            String userName,
+            String userPassword,
+            boolean proxyEnable,
+            String proxyHost,
+            int proxyPort
+    ) {
         this.userName = userName;
         this.userPassword = userPassword;
         this.proxyEnable = proxyEnable;
+        this.proxyHost = proxyHost;
+        this.proxyPort = proxyPort;
     }
 
     public HttpConnector(String userName, String userPassword) {
-        this(userName, userPassword, false);
+        this(userName, userPassword, false, null, 0);
     }
 
     public HttpComponentsMessageSender httpComponentsMessageSender() {
@@ -145,7 +164,7 @@ public class HttpConnector {
                 .setConnectTimeout(300000)
                 .setAuthenticationEnabled(true);
         if (this.proxyEnable) {
-            builder.setProxy(new HttpHost(PROXY_HOST, PROXY_PORT));
+            builder.setProxy(new HttpHost(proxyHost, proxyPort));
         }
         return builder.build();
     }
