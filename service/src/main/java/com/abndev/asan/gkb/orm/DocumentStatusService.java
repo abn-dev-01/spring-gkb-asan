@@ -14,7 +14,7 @@ public class DocumentStatusService {
     public DocumentStatusDict update(DocumentStatusDict dict) {
         Optional<DocumentStatusDict> foundOpt = documentStatusRepo.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            DocumentStatusDict savedType = documentStatusRepo.save(dict);
+            DocumentStatusDict savedType = documentStatusRepo.saveAndFlush(dict);
             return savedType;
         }
         return dict;

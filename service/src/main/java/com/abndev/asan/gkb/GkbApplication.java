@@ -38,26 +38,11 @@ public class GkbApplication {
     @Autowired
     private PersonService personService;
 
-    //    @Value("${soap.client.user.name}")
-    private String userName;
-
-    //    @Value("${soap.client.user.password}")
-    private String userPassword;
-
-    private boolean proxyEnable;
-
     public static void main(String[] args) {
         SpringApplication.run(GkbApplication.class, args);
     }
 
-    public GkbApplication(
-            @Value("${soap.client.user.name}") String userName,
-            @Value("${soap.client.user.password}") String userPassword,
-            @Value("${soap.client.proxy.enable}") Boolean proxyEnable
-    ) {
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.proxyEnable = proxyEnable;
+    public GkbApplication() {
     }
 
     /**
@@ -95,6 +80,7 @@ public class GkbApplication {
 
     @Bean
     public WebServiceTemplate webServiceTemplate(@Value("${" + SOAP_SERVICE_URL + "}") String soapUrl) {
+        
         WebServiceTemplate webServiceTemplate = new WebServiceTemplate();
         webServiceTemplate.setMarshaller(marshaller());
         webServiceTemplate.setUnmarshaller(marshaller());
@@ -130,22 +116,22 @@ public class GkbApplication {
 //        return msgSender;
 //    }
 
-    @Bean
-    CommandLineRunner lookup(SOAPConnector soapConnector) {
-        return args -> {
-            String name = "Sajal";//Default Name
-            if (args.length > 0) {
-                name = args[0];
-            }
-            Result result = client.getPerson();
-
-            PersonResponse personResponse = (PersonResponse) ((JAXBResult) result).getResult();
-            personService.store(personResponse);
-
-
-            System.out.println("Got Response As below ========= : ");
-            System.out.println("Result : " + result);
-        };
-    }
+//    @Bean
+//    CommandLineRunner lookup(SOAPConnector soapConnector) {
+//        return args -> {
+//            String name = "Sajal";//Default Name
+//            if (args.length > 0) {
+//                name = args[0];
+//            }
+//            Result result = client.getPerson();
+//
+//            PersonResponse personResponse = (PersonResponse) ((JAXBResult) result).getResult();
+//            personService.store(personResponse);
+//
+//
+//            System.out.println("Got Response As below ========= : ");
+//            System.out.println("Result : " + result);
+//        };
+//    }
 
 }

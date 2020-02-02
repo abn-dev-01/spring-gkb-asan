@@ -15,7 +15,7 @@ public class IssueOrganizationService {
     public IssueOrganizationDict update(IssueOrganizationDict issueOrganization) {
         Optional<IssueOrganizationDict> foundOpt = issueOrganizationRepo.findById(issueOrganization.getCode());
         if (!foundOpt.isPresent()) {
-            IssueOrganizationDict savedType = issueOrganizationRepo.save(issueOrganization);
+            IssueOrganizationDict savedType = issueOrganizationRepo.saveAndFlush(issueOrganization);
             return savedType;
         }
         return issueOrganization;

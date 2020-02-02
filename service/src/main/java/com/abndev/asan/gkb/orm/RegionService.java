@@ -14,7 +14,7 @@ public class RegionService {
     public RegionDict update(RegionDict dict) {
         Optional<RegionDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            RegionDict savedType = repository.save(dict);
+            RegionDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

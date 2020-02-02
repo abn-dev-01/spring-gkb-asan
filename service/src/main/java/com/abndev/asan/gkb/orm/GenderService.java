@@ -15,7 +15,7 @@ public class GenderService {
     public GenderDict update(GenderDict dict) {
         Optional<GenderDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            GenderDict savedType = repository.save(dict);
+            GenderDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

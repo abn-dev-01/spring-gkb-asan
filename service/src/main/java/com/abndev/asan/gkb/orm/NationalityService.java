@@ -14,7 +14,7 @@ public class NationalityService {
     public NationalityDict update(NationalityDict dict) {
         Optional<NationalityDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            NationalityDict savedType = repository.save(dict);
+            NationalityDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

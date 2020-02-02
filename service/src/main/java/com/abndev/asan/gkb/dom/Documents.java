@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -20,7 +21,8 @@ import java.util.Set;
 public class Documents {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @SequenceGenerator(name = "docs_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "docs_seq")
     @XmlTransient
     private Integer id;
 

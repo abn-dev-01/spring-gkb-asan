@@ -15,7 +15,7 @@ public class LifeStatusService {
     public LifeStatusDict update(LifeStatusDict dict) {
         Optional<LifeStatusDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            LifeStatusDict savedType = repository.save(dict);
+            LifeStatusDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

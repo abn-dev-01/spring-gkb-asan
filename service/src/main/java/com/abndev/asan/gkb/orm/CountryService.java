@@ -14,7 +14,7 @@ public class CountryService {
     public CountryDict update(CountryDict dict) {
         Optional<CountryDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            CountryDict savedType = repository.save(dict);
+            CountryDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

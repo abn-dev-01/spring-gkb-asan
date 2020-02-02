@@ -15,7 +15,7 @@ public class BirthCertificateService {
     public CertificateBirth update(CertificateBirth dict) {
         Optional<CertificateBirth> foundOpt = repository.findById(dict.getNumber());
         if (!foundOpt.isPresent()) {
-            CertificateBirth savedType = repository.save(dict);
+            CertificateBirth savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

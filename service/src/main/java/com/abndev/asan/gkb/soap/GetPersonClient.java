@@ -5,6 +5,7 @@ import com.abndev.asan.gkb.dom.PersonResponse;
 import com.abndev.asan.gkb.person.schema.GetPerson;
 import com.abndev.asan.gkb.person.schema.GetPersonResponse;
 import com.abndev.asan.gkb.person.schema.ObjectFactory;
+import com.abndev.asan.gkb.rest.MessageRequest;
 import com.abndev.asan.gkb.utils.HttpConnector;
 import com.abndev.asan.gkb.utils.SSLTool;
 import org.slf4j.Logger;
@@ -48,13 +49,15 @@ public class GetPersonClient {
     @Value("${soap.client.proxy.enable}")
     private Boolean proxyEnable;
 
-    public Result getPerson()
+    public Result getPerson(MessageRequest messageRequest)
             throws SOAPException, JAXBException {
 
         ObjectFactory factory = new ObjectFactory();
         GetPerson person = new GetPerson();
-        person.setIin("440902700044");
-        person.setConsentConfirmed(true);
+//        person.setIin("440902700044");
+//        person.setConsentConfirmed(true);
+        person.setIin(messageRequest.getInn());
+        person.setConsentConfirmed(messageRequest.isConsentConfirmed());
 
         JAXBElement<GetPerson> getPersonRequest = factory.createGetPerson(person);
 

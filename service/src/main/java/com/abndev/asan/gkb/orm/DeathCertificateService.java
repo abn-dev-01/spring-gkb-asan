@@ -14,7 +14,7 @@ public class DeathCertificateService {
     public CertificateDeath update(CertificateDeath dict) {
         Optional<CertificateDeath> foundOpt = repository.findById(dict.getNumber());
         if (!foundOpt.isPresent()) {
-            CertificateDeath savedType = repository.save(dict);
+            CertificateDeath savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

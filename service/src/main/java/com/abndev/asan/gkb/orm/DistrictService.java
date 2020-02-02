@@ -14,7 +14,7 @@ public class DistrictService {
     public DistrictDict update(DistrictDict dict) {
         Optional<DistrictDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            DistrictDict savedType = repository.save(dict);
+            DistrictDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

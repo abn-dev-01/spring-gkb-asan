@@ -15,7 +15,7 @@ public class CitizenshipService {
     public CitizenshipDict update(CitizenshipDict dict) {
         Optional<CitizenshipDict> foundOpt = repository.findById(dict.getCode());
         if (!foundOpt.isPresent()) {
-            CitizenshipDict savedType = repository.save(dict);
+            CitizenshipDict savedType = repository.saveAndFlush(dict);
             return savedType;
         }
         return dict;

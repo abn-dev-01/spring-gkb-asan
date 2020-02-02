@@ -14,7 +14,7 @@ public class DocumentTypeService {
     public DocumentTypeDict update(DocumentTypeDict type) {
         Optional<DocumentTypeDict> foundOpt = documentTypeRepo.findById(type.getCode());
         if (!foundOpt.isPresent()) {
-            DocumentTypeDict savedType = documentTypeRepo.save(type);
+            DocumentTypeDict savedType = documentTypeRepo.saveAndFlush(type);
             return savedType;
         }
         return type;

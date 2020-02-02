@@ -27,20 +27,21 @@ import com.abndev.asan.gkb.orm.DataObjectRepo;
 import com.abndev.asan.gkb.orm.DeathCertificateService;
 import com.abndev.asan.gkb.orm.DistrictService;
 import com.abndev.asan.gkb.orm.DocumentStatusService;
-import com.abndev.asan.gkb.orm.DocumentTypeRepo;
 import com.abndev.asan.gkb.orm.DocumentTypeService;
 import com.abndev.asan.gkb.orm.GenderService;
 import com.abndev.asan.gkb.orm.IssueOrganizationService;
 import com.abndev.asan.gkb.orm.LifeStatusService;
 import com.abndev.asan.gkb.orm.NationalityService;
+import com.abndev.asan.gkb.orm.PersonInfoService;
 import com.abndev.asan.gkb.orm.RegionService;
 import com.abndev.asan.gkb.orm.ResponseInfoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -75,6 +76,8 @@ public class PersonService {
     private DistrictService districtService;
     @Autowired
     private RegionService regionService;
+    @Autowired
+    private PersonInfoService personInfoService;
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void store(PersonResponse response) {
@@ -89,7 +92,13 @@ public class PersonService {
         DataObject data = personObject.getResponseData().getDataObject();
 
         // Persons
-        PersonInfo personInfo = data.getPersons().getPersonInfos().iterator().next();
+        List<PersonInfo> personCollection = data.getPersons().getPersonInfos();
+        // TODO check NULL ?
+        if (CollectionUtils.isEmpty(personCollection)) {
+            throw new RuntimeException("Person not present.");
+        }
+        PersonInfo personInfo = data.getPersons().getPersonInfos().get(0);
+        data.getPersons().setInn(personInfo.getIin());
 
         // Gender
         if (personInfo.getGender() != null) {
@@ -165,6 +174,13 @@ public class PersonService {
                 doc.setStatus(docStatusUpdated);
             }
         });
+
+        // PersonInfo
+        if (personInfo != null) {
+            PersonInfo pi = personInfoService.update(personInfo);
+            personCollection.remove(personInfo);
+            personCollection.add(pi);
+        }
 
         dataObjectRepo.save(data);
     }

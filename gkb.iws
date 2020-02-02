@@ -2,72 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64b76bc1-656e-46d8-a9e2-97a1b3ca8ad4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/CertificateDeath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/CapableStatusDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/CitizenshipDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/CountryDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/DistrictDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/DocumentStatusDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/DocumentTypeDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/ExcludeStatusDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/GenderDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/IssueOrganizationDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/LifeStatusDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/NationalityDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/RegionDict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/BirthCertificateRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/BirthCertificateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CitizenshipRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CitizenshipService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CountryRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CountryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DeathCertificateRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DeathCertificateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DistrictRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DistrictService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentStatusRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentStatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentTypeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/GenderRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/GenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/IssueOrganizationRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/IssueOrganizationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/LifeStatusRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/LifeStatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/NationalityRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/NationalityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/RegionRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/RegionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/PersonInfoRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/PersonInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/rest/MessageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/rest/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/rest/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gkb.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/gkb.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gkb.iws" beforeDir="false" afterPath="$PROJECT_DIR$/gkb.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/GkbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/GkbApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/BirthPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/BirthPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/CertificateUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/CertificateBirth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DisappearStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/DisappearStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Document.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Documents.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Documents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ExcludeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ExcludeStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ForeignData.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ForeignData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/MissingStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/MissingStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonCapableStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonCapableStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/PersonInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Persons.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/Persons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RegAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RegAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RepatriationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/RepatriationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ResponseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/ResponseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/DictUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/DictUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/MessageResultDict.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/MessageResultDict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/ReceiverDict.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/ReceiverDict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/SenderDict.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/SenderDict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/dom/dict/ResponseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/BirthCertificateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/BirthCertificateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CitizenshipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CitizenshipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/CountryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DataObjectRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DataObjectRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DeathCertificateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DeathCertificateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DistrictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DistrictService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/DocumentTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/GenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/GenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/IssueOrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/IssueOrganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/LifeStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/LifeStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/NationalityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/NationalityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/RegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/RegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/ResponseInfoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/orm/ResponseInfoRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/document.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/document.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/person.xsd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/person.xsd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/response.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/response.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/service.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/service.wsdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/wsdl/PersonDetailsImplService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/wsdl/PersonDetailsImplService.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/wsdl/service.xml.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/wsdl/service.xml.wsdl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,8 +90,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -182,12 +146,29 @@
       <recent name="com.abndev.asan.gkb.soap" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.abndev.asan.gkb.rest" />
       <recent name="com.abndev.asan.gkb.orm" />
       <recent name="com.abndev.asan.gkb.dom" />
       <recent name="com.abndev.asan.gkb.soap" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:9090/api/message" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GkbApplication~TEST">
+    <configuration name="GkbApplication~TEST#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/GkbApplication~TEST.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="GkbApplication~TEST" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="service" />
       <extension name="coverage">
@@ -207,6 +188,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.GkbApplication~TEST" />
+        <item itemvalue="HTTP Request.GkbApplication~TEST#1" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +205,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:database" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@41d1c81c" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@a079dd5" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -242,7 +224,7 @@
       <workItem from="1579716898332" duration="89000" />
       <workItem from="1579717097586" duration="53104000" />
       <workItem from="1580205093972" duration="38257000" />
-      <workItem from="1580498107196" duration="27946000" />
+      <workItem from="1580498107196" duration="44879000" />
     </task>
     <task id="LOCAL-00002" summary="start">
       <created>1579723889464</created>
@@ -321,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580551082321</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="parser works">
+      <created>1580577998371</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580577998371</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +327,8 @@
     <MESSAGE value="JAXB" />
     <MESSAGE value="ORM by PersonInfo" />
     <MESSAGE value="rename to DICT" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename to DICT" />
+    <MESSAGE value="parser works" />
+    <option name="LAST_COMMIT_MESSAGE" value="parser works" />
   </component>
   <component name="WindowStateProjectService">
     <state x="583" y="199" key="#Assign_Data_Sources" timestamp="1580553583159">
@@ -353,10 +343,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="350" y="165" width="1345" height="819" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580498036167" />
-    <state x="796" y="250" key="#com.intellij.ide.util.MemberChooser" timestamp="1580561016391">
+    <state x="796" y="250" key="#com.intellij.ide.util.MemberChooser" timestamp="1580645333985">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="796" y="250" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580561016391" />
+    <state x="796" y="250" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645333985" />
     <state x="796" y="250" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423553978" />
     <state x="796" y="250" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579780815270" />
     <state x="671" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579716931598">
@@ -368,16 +358,16 @@
     </state>
     <state x="745" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580556667766" />
     <state x="745" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580419610001" />
-    <state x="227" y="243" width="1642" height="901" key="#xdebugger.evaluate" timestamp="1580575741615">
+    <state x="117" y="37" width="1642" height="901" key="#xdebugger.evaluate" timestamp="1580643017204">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="227" y="243" width="1505" height="593" key="#xdebugger.evaluate/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580575741615" />
+    <state x="117" y="37" width="1505" height="593" key="#xdebugger.evaluate/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580643017204" />
     <state x="-1798" y="27" width="1642" height="901" key="#xdebugger.evaluate/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580321897919" />
     <state x="316" y="488" width="1009" height="448" key="#xdebugger.evaluate/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579876257415" />
-    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2" timestamp="1580551081249">
+    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2" timestamp="1580577997255">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580551081249" />
+    <state x="616" y="129" width="1213" height="821" key="CommitChangelistDialog2/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577997255" />
     <state width="1347" height="679" key="DebuggerActiveHint" timestamp="1580561264137">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -387,77 +377,77 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1579734209784" />
-    <state width="1624" height="508" key="GridCell.Tab.0.bottom" timestamp="1580577498888">
+    <state width="1624" height="487" key="GridCell.Tab.0.bottom" timestamp="1580645924536">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.0.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498888" />
-    <state width="1624" height="508" key="GridCell.Tab.0.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423792821" />
+    <state width="1624" height="487" key="GridCell.Tab.0.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924536" />
+    <state width="1624" height="487" key="GridCell.Tab.0.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146231" />
     <state width="1624" height="477" key="GridCell.Tab.0.bottom/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474710" />
-    <state width="1624" height="508" key="GridCell.Tab.0.center" timestamp="1580577498888">
+    <state width="1624" height="487" key="GridCell.Tab.0.center" timestamp="1580645924535">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.0.center/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498888" />
-    <state width="1624" height="508" key="GridCell.Tab.0.center/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423792821" />
+    <state width="1624" height="487" key="GridCell.Tab.0.center/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924535" />
+    <state width="1624" height="487" key="GridCell.Tab.0.center/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146231" />
     <state width="1624" height="477" key="GridCell.Tab.0.center/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474710" />
-    <state width="1624" height="508" key="GridCell.Tab.0.left" timestamp="1580577498888">
+    <state width="1624" height="487" key="GridCell.Tab.0.left" timestamp="1580645924535">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.0.left/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498888" />
-    <state width="1624" height="508" key="GridCell.Tab.0.left/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423792821" />
+    <state width="1624" height="487" key="GridCell.Tab.0.left/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924535" />
+    <state width="1624" height="487" key="GridCell.Tab.0.left/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146231" />
     <state width="1624" height="477" key="GridCell.Tab.0.left/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474710" />
-    <state width="1624" height="508" key="GridCell.Tab.0.right" timestamp="1580577498888">
+    <state width="1624" height="487" key="GridCell.Tab.0.right" timestamp="1580645924536">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.0.right/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498888" />
-    <state width="1624" height="508" key="GridCell.Tab.0.right/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423792821" />
+    <state width="1624" height="487" key="GridCell.Tab.0.right/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924536" />
+    <state width="1624" height="487" key="GridCell.Tab.0.right/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146231" />
     <state width="1624" height="477" key="GridCell.Tab.0.right/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474710" />
-    <state width="1624" height="508" key="GridCell.Tab.1.bottom" timestamp="1580577530676">
+    <state width="1624" height="487" key="GridCell.Tab.1.bottom" timestamp="1580645924371">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.1.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577530676" />
-    <state width="1624" height="508" key="GridCell.Tab.1.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423778344" />
+    <state width="1624" height="487" key="GridCell.Tab.1.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924371" />
+    <state width="1624" height="487" key="GridCell.Tab.1.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146113" />
     <state width="1624" height="477" key="GridCell.Tab.1.bottom/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579881011284" />
-    <state width="1624" height="508" key="GridCell.Tab.1.center" timestamp="1580577530675">
+    <state width="1624" height="487" key="GridCell.Tab.1.center" timestamp="1580645924370">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.1.center/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577530675" />
-    <state width="1624" height="508" key="GridCell.Tab.1.center/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423778344" />
+    <state width="1624" height="487" key="GridCell.Tab.1.center/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924370" />
+    <state width="1624" height="487" key="GridCell.Tab.1.center/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146113" />
     <state width="1624" height="477" key="GridCell.Tab.1.center/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579881011284" />
-    <state width="1624" height="508" key="GridCell.Tab.1.left" timestamp="1580577530674">
+    <state width="1624" height="487" key="GridCell.Tab.1.left" timestamp="1580645924370">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.1.left/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577530674" />
-    <state width="1624" height="508" key="GridCell.Tab.1.left/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423778344" />
+    <state width="1624" height="487" key="GridCell.Tab.1.left/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924370" />
+    <state width="1624" height="487" key="GridCell.Tab.1.left/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146112" />
     <state width="1624" height="477" key="GridCell.Tab.1.left/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579881011283" />
-    <state width="1624" height="508" key="GridCell.Tab.1.right" timestamp="1580577530675">
+    <state width="1624" height="487" key="GridCell.Tab.1.right" timestamp="1580645924371">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.1.right/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577530675" />
-    <state width="1624" height="508" key="GridCell.Tab.1.right/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423778344" />
+    <state width="1624" height="487" key="GridCell.Tab.1.right/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924371" />
+    <state width="1624" height="487" key="GridCell.Tab.1.right/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146113" />
     <state width="1624" height="477" key="GridCell.Tab.1.right/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579881011284" />
-    <state width="1624" height="508" key="GridCell.Tab.2.bottom" timestamp="1580577498752">
+    <state width="1624" height="487" key="GridCell.Tab.2.bottom" timestamp="1580645924371">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.2.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498752" />
-    <state width="1624" height="508" key="GridCell.Tab.2.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423749426" />
+    <state width="1624" height="487" key="GridCell.Tab.2.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924371" />
+    <state width="1624" height="487" key="GridCell.Tab.2.bottom/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146114" />
     <state width="1624" height="477" key="GridCell.Tab.2.bottom/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474598" />
-    <state width="1624" height="508" key="GridCell.Tab.2.center" timestamp="1580577498752">
+    <state width="1624" height="487" key="GridCell.Tab.2.center" timestamp="1580645924371">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.2.center/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498752" />
-    <state width="1624" height="508" key="GridCell.Tab.2.center/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423749426" />
+    <state width="1624" height="487" key="GridCell.Tab.2.center/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924371" />
+    <state width="1624" height="487" key="GridCell.Tab.2.center/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146113" />
     <state width="1624" height="477" key="GridCell.Tab.2.center/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474598" />
-    <state width="1624" height="508" key="GridCell.Tab.2.left" timestamp="1580577498752">
+    <state width="1624" height="487" key="GridCell.Tab.2.left" timestamp="1580645924371">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.2.left/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498752" />
-    <state width="1624" height="508" key="GridCell.Tab.2.left/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423749426" />
+    <state width="1624" height="487" key="GridCell.Tab.2.left/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924371" />
+    <state width="1624" height="487" key="GridCell.Tab.2.left/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146113" />
     <state width="1624" height="477" key="GridCell.Tab.2.left/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474598" />
-    <state width="1624" height="508" key="GridCell.Tab.2.right" timestamp="1580577498752">
+    <state width="1624" height="487" key="GridCell.Tab.2.right" timestamp="1580645924371">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1624" height="508" key="GridCell.Tab.2.right/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577498752" />
-    <state width="1624" height="508" key="GridCell.Tab.2.right/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423749426" />
+    <state width="1624" height="487" key="GridCell.Tab.2.right/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645924371" />
+    <state width="1624" height="487" key="GridCell.Tab.2.right/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642146114" />
     <state width="1624" height="477" key="GridCell.Tab.2.right/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880474598" />
     <state width="207" height="457" key="HiddenNamespacesPopup" timestamp="1580421714364">
       <screen x="62" y="0" width="1858" height="1080" />
@@ -467,19 +457,19 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="521" y="195" key="Maven.ArtifactSearchDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1579724470135" />
-    <state x="227" y="90" width="1285" height="714" key="SettingsEditor" timestamp="1580560591101">
+    <state x="227" y="90" width="1285" height="714" key="SettingsEditor" timestamp="1580644426205">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="227" y="90" width="1488" height="894" key="SettingsEditor/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580560591101" />
+    <state x="227" y="90" width="1488" height="894" key="SettingsEditor/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580644426205" />
     <state x="200" y="43" width="1285" height="714" key="SettingsEditor/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580328969790" />
     <state x="890" y="456" key="SimpleOpenTaskDialog" timestamp="1579722179761">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="890" y="456" key="SimpleOpenTaskDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1579722179761" />
-    <state x="712" y="281" width="552" height="524" key="StructurePopup" timestamp="1579889723328">
+    <state x="712" y="281" width="552" height="524" key="StructurePopup" timestamp="1580643355533">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="712" y="281" width="552" height="524" key="StructurePopup/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1579889723328" />
+    <state x="712" y="281" width="552" height="524" key="StructurePopup/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580643355533" />
     <state x="712" y="281" width="698" height="740" key="StructurePopup/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579878005930" />
     <state x="838" y="456" key="VCS.ChangelistChooser" timestamp="1579730135221">
       <screen x="62" y="0" width="1858" height="1080" />
@@ -490,10 +480,14 @@
     </state>
     <state width="937" height="548" key="XDebugger.FullValuePopup/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1579768045182" />
     <state width="937" height="548" key="XDebugger.FullValuePopup/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579780583007" />
-    <state x="673" y="283" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580498379477">
+    <state x="842" y="430" width="326" height="235" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1580644019778">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="673" y="283" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580498379477" />
+    <state x="842" y="430" width="326" height="235" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580644019778" />
+    <state x="673" y="63" width="846" height="913" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580644230659">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="673" y="63" width="846" height="913" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580644230659" />
     <state x="940" y="533" key="extract.method.dialog" timestamp="1579761125190">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -502,12 +496,12 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="227" y="115" width="1405" height="789" key="find.popup/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580572886822" />
-    <state width="535" height="96" key="javadoc.popup.new" timestamp="1580577717820">
+    <state width="535" height="314" key="javadoc.popup.new" timestamp="1580645851632">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="535" height="96" key="javadoc.popup.new/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580577717820" />
-    <state width="368" height="187" key="javadoc.popup.new/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580423484649" />
-    <state width="368" height="205" key="javadoc.popup.new/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1579880430793" />
+    <state width="535" height="314" key="javadoc.popup.new/62.0.1858.1080/-1920.0.1920.1080/1920.-529.1200.1600@62.0.1858.1080" timestamp="1580645851632" />
+    <state width="368" height="187" key="javadoc.popup.new/62.0.1858.1080/-1920.0.1920.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642055802" />
+    <state width="368" height="205" key="javadoc.popup.new/62.0.1858.1080/1920.0.1920.1080@62.0.1858.1080" timestamp="1580642313032" />
     <state x="647" y="250" key="run.anything.popup" timestamp="1579880252849">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -522,18 +516,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/GkbApplication.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/protocol/RequestContent.class</url>
           <line>46</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java</url>
-          <line>89</line>
+          <line>92</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -553,12 +542,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java</url>
-          <line>169</line>
+          <line>172</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/main/java/com/abndev/asan/gkb/soap/GetPersonClient.java</url>
-          <line>167</line>
+          <line>170</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

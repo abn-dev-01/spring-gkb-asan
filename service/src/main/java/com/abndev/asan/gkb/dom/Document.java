@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -24,7 +25,8 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Document {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @SequenceGenerator(name = "docs_det_seq", allocationSize = 1, sequenceName = "docs_det_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "docs_det_seq")
     @XmlTransient
     private Integer gid;
 
