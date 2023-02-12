@@ -1,2 +1,2 @@
 # spring-gkb-asan
-REST service redirect request to the SOAP
+REST service of redirection a request to the SOAP
